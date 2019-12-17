@@ -1,0 +1,119 @@
+{% extends './masterpage.html' %}
+{% block content %}
+<style xmlns="http://www.w3.org/1999/html">
+body, html {
+  height: 100%;
+  margin: 0;
+  font: 400 15px/1.8 "Lato", sans-serif;
+  color: #777;
+}
+p{
+font-size: 20px;
+}
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  position: relative;
+  opacity: 0.65;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.bgimg-1 {
+  background-image: url("/static/fileweb/kythuatphanmem.jpg");
+  min-height: 100%;
+  padding: 288px;
+}
+
+.bgimg-2 {
+  background-image: url(/static/fileweb/MIS.jpg);
+    min-height: 100%;
+    position: relative;
+    z-index: 999;
+    top: 44px;
+    padding: 288px;
+}
+
+
+.caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+
+.caption span.border {
+  background-color: #b20000;
+  color: #fff;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
+}
+
+h3 {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font: 20px "Lato", sans-serif;
+  color: #111;
+}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+  .bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: scroll;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="bgimg-1">
+  <div class="caption">
+      <span class="border"><strong>NGÀNH KỸ THUẬT PHẦM MỀM</strong></span>
+  </div>
+</div>
+
+<div style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
+    <p>Với sự phát triển như vũ bão của công nghệ thông tin như hiện nay, nhân lực ngành Kỹ Thuật Phần Mềm đang thường xuyên nhận được sự quan tâm “săn đón” của các doanh nghiệp trong và ngoài nước. Theo các chuyên gia trong ngành, nhân sự trong các mảng dịch vụ internet, sáng tạo nên những sản phẩm mang tính ứng dụng, lập trình game,… Tuy nhiên nhân sự đáp ứng được yêu cầu tuyển dụng của các cơ quan, doanh nghiệp vẫn còn khá hạn chế, mở ra nhiều cơ hội việc làm hấp dẫn cho các sinh viên theo học ngành Kỹ Thuật Phần Mềm.</p>
+    <p>Kỹ Thuật Phần Mềm là ngành cung cấp cho người học những kiến thức và kỹ năng nhằm hoàn thiện quy trình phát triển các phần mềm được lập trình, mang đến những chương trình phần mềm đạt chất lượng có tính ứng dụng cao, phù hợp với yêu cầu cụ thể của khách hàng. Với mỗi sản phẩm phần mềm được ứng dụng vào thực tiễn, các kỹ sư ngành Kỹ Thuật Phần Mềm đã lập trình để máy móc hoặc robot có thể tự động điều khiển các thiết bị, thao tác, quy trình trong công việc cũng như giải trí, sinh hoạt. Các sản phẩm phần mềm được hoàn thiện có thể giúp con người tiết kiệm thời gian và công sức, giảm thiểu những sai sót và tối ưu hóa các quy trình hoạt động.</p>
+    <p>Để đạt được thành công trong công việc, các kỹ sư ngành Kỹ Thuật Phần Mềm cần phải nắm vững hệ thống kiến thức nền tảng và các kỹ năng liên quan tốt. Theo đó, sinh viên theo học ngành Kỹ Thuật Phần Mềm không chỉ hiểu rõ về kiến ​​trúc máy tính, hệ điều hành và cấu trúc dữ liệu mà còn phải có các kỹ năng: phân tích thông tin kỹ thuật phức tạp, thiết kế và thể hiện được cấu trúc cơ sở dữ liệu, xây dựng phần mềm ứng dụng, kiểm thử và quản lý các dự án phần mềm,…</p>
+    <p>Hiện tại, nhu cầu tuyển dụng kỹ sư Kỹ Thuật Phần Mềm đang tập trung vào các ngành: tài chính – ngân hàng – bảo hiểm, chăm sóc sức khỏe, du lịch khách sạn, quảng cáo, giáo dục,… Đây cũng chính là những công việc được đánh giá có môi trường làm việc năng động, triển vọng nghề nghiệp tốt, thu nhập hấp dẫn,…</p>
+    <p>Sau khi ra trường, sinh viên theo học ngành Kỹ Thuật Phần Mềm có thể làm việc tại các vị trí: Kỹ sư hệ thống phần mềm, Kỹ sư chất lượng phần mềm, Kỹ sư quy trình sản xuất phần mềm, Lập trình phát triển ứng dụng, Chuyên viên phân tích, thiết kế hệ thống thông tin, Chuyên viên phân tích, thiết kế dữ liệu, Quản trị các hệ cơ sở dữ liệu,… tại các công ty tư vấn giải pháp, xây dựng và bảo trì hệ thống phần mềm hay các công ty sản xuất, gia công phần mềm trong và ngoài nước,…</p>
+    <p>Với các chuyên ngành đào tạo: <a href="https://duytan.edu.vn/ky-thuat-mang">Kỹ Thuật Mạng</a>, <a href="https://duytan.edu.vn/cong-nghe-phan-mem/nganh-cong-nghe-phan-mem-all">Công Nghệ Phần Mềm</a>, Big Data & Machine Learning, Thiết kế Đồ họa/Game/Multimedia, sinh viên theo học ngành Kỹ Thuật Phần Mềm tại Đại học Duy Tân sẽ được đào tạo một cách bài bản và chuyên nghiệp theo chuẩn quốc tế, tích hợp đầy đủ kiến thức cơ bản của nhóm ngành Công nghệ Thông tin và các quy trình phát triển phần mềm.</p>
+    <p>Lựa chọn theo học ngành Kỹ Thuật Phần Mềm tại các cơ sở đào tạo uy tín sẽ giúp các bạn trẻ nhanh chóng làm quen môi trường phát triển phần mềm chuyên nghiệp tại các công ty, tập đoàn phát triển phần mềm và sớm khẳng định khả năng của mình thông qua các dự án, sản phẩm phần mềm.</p>
+</div>
+
+<div class="bgimg-2">
+  <div class="caption">
+      <span class="border" ><strong>NGÀNH HỆ THỐNG THÔNG TIN</strong></span>
+  </div>
+</div>
+
+<div style="position:relative;">
+  <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+  <p>Trong bối cảnh nền kinh tế hiện đại với sự phát triển mạnh mẽ của các tập đoàn, tổ chức, doanh nghiệp lớn cùng với hệ thống các chuỗi cửa hàng bán sỉ và lẻ, việc nắm giữ hệ thống dữ liệu và quản lý hiệu quả hoạt động là vô cùng quan trọng, quyết định không nhỏ trong sự thành bại của mỗi cơ sở kinh doanh. Theo học ngành Hệ Thống Thông Tin là một sự lựa chọn mang đến nhiều hứa hẹn hấp dẫn, đảm bảo nhiều cơ hội việc làm trong bối cảnh Công nghệ thông tin phát triển mạnh mẽ như hiện tại.</p>
+      <p><strong>Ngành học có nhu cầu nhân lực lành nghề lớn</strong></p>
+      <p>Hệ thống Thông tin là ngành giúp người học tiếp cận hệ thống kiến thức và kỹ năng cơ bản nhất nhằm kết hợp nhuần nhuyễn giữa phần cứng, phần mềm và mạng truyền thông nhằm vận hành hệ thống thông tin hiệu quả nhất đồng thời thu thập và phân tích, kết nối dữ liệu thông tin một cách chính xác trong các tổ chức, cơ sở kinh doanh. Một hệ thống thông tin được quản lý chặt chẽ sẽ giúp các cơ sở kinh doanh hoạt động hiệu quả hơn.</p>
+      <p>Tính đến thời điểm hiện tại, nhu cầu nhân lực trong ngành Hệ thống Thông tin ở Việt Nam đang khá lớn. Các tập đoàn, công ty đang đẩy mạnh việc “số hóa” hệ thống dữ liệu về sản phẩm, khách hàng,… nhằm tối ưu hóa hoạt động kinh doanh. Do đó, nắm vững chuỗi kiến thức chuyên ngành về cơ sở dữ liệu kết hợp với kiến thức liên quan về quản lý và kinh doanh giúp doanh nghiệp thực hiện và quản lý các dự án thương mại, phân tích hệ thống dữ liệu, quản lý hệ thống an ninh,… sẽ giúp người học ngành Hệ thống Thông tin có thêm nhiều cơ hội trong công việc.</p>
+      <p><strong>Những kỹ năng nghề nghiệp cơ bản mà người học ngành Hệ thống Thông tin cần có</strong></p>
+      <p> – Phân tích, xây dựng, quản trị các hệ thống thông tin quản lý,</p>
+      <p>   – Quản lý dự án công nghệ thông tin, lập trình web, mạng và truyền thông,</p>
+      <p>– Phân tích và khai thác sử dụng dữ liệu lớn, khai phá dữ liệu, bảo mật dữ liệu và nâng cao tính an toàn của hệ thống,</p>
+      <p>– Thống kê dự báo trong lĩnh vực kinh tế, tài chính, kế toán, quản trị, ngân hàng,…</p>
+      <p>– Phân tích, xử lý thông tin cho doanh nghiệp…</p>
+      <p><strong>Triển vọng nghề nghiệp hấp dẫn</strong></p>
+      <p>Sau khi hoàn thành chương trình học ngành Hệ thống Thông tin, bạn có thể làm việc tại các vị trí: chuyên viên quản lý dự án công nghệ thông tin, chuyên viên tư vấn triển khai ứng dụng, chuyên viên hỗ trợ kỹ thuật ứng dụng doanh nghiệp, chuyên viên phân tích hệ thống nghiệp vụ, chuyên viên phát triển ứng dụng kinh doanh, chuyên viên hệ thống thông tin &amp; lưu trữ dữ liệu,…</p>
+      <p>Với những thế mạnh sẵn có từ các ngành học uy tín Quản trị kinh doanh, Công nghệ thông tin, Truyền thông và mạng máy tính, Đại học Duy Tân đã đưa vào giảng dạy ngành Hệ thống thông tin quản lý từ năm 2014. Sinh viên khi theo học ngành Hệ thống thông tin quản lý tại Đại học Duy Tân sẽ được trang bị hệ thống kiến thức vững chắc không chỉ về Công nghệ Thông tin, Quản trị Kinh doanh, Tài chính Kế toán mà còn được trau dồi những kỹ năng mềm cần thiết như: làm việc nhóm, tư duy logic, phản biện,…</p>
+  </div>
+</div>
+
+
+
+<div class="bgimg-1">
+  <div class="caption">
+  </div>
+</div>
+
+{% endblock %}

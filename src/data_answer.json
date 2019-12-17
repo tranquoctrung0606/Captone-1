@@ -1,0 +1,42 @@
+[
+  {
+    "target": "chao_hoi",
+    "feature": [
+      "Chào bạn, bạn cần hỗ trợ gì à? ",
+      "Bạn cần hỗ trợ gì không",
+      "hello, Bạn cần hỗ trợ gì không"
+    ]
+  },
+  {
+    "target": "hoc_phi",
+    "feature": [
+      "tầm 100 triệu nge bạn ",
+      "hơi mắc đó à nge",
+      "cũng hơi mắc ko biết bạn đóng được ko"
+    ]
+  },
+  {
+    "target": "khoa_hoc",
+    "feature": [
+      "khóa học kéo dài đền 4 năm, theo chương trình của nhà trường"
+    ]
+  },
+  {
+    "target": "cntt",
+    "feature": [
+      "Công nghệ thông tin là ngành có chất lượng dạy tốt nhất trường"
+    ]
+  },
+  {
+    "target": "diem_dau_vao",
+    "feature": [
+      "điểm đầu vào là của từng ngành khác nhau, nhưng trung bình là 21 điểm"
+    ]
+  },
+  {
+    "target": "tam_biet",
+    "feature": [
+      "cảm ơn bạn đã quan tâm đến trường chúng tôi"
+    ]
+  }
+]

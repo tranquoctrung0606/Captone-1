@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet"
+          id="bootstrap-css">
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <style type="text/css">
+        body{
+    height:400px;
+    position: fixed;
+    bottom: 0;
+}
+.col-md-2, .col-md-10{
+    padding:0;
+}
+.panel{
+    margin-bottom: 0px;
+}
+.chat-window{
+    bottom:0;
+    position:fixed;
+    float:right;
+    margin-left:10px;
+}
+.chat-window > div > .panel{
+    border-radius: 5px 5px 0 0;
+}
+.icon_minim{
+    padding:2px 10px;
+}
+.msg_container_base{
+  background: #e5e5e5;
+  margin: 0;
+  padding: 0 10px 10px;
+  max-height:300px;
+  overflow-x:hidden;
+}
+.top-bar {
+  background: #666;
+  color: white;
+  padding: 10px;
+  position: relative;
+  overflow: hidden;
+}
+.msg_receive{
+    padding-left:0;
+    margin-left:0;
+}
+.msg_sent{
+    padding-bottom:20px !important;
+    margin-right:0;
+}
+.messages {
+  background: white;
+  padding: 10px;
+  border-radius: 2px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  max-width:100%;
+}
+.messages > p {
+    font-size: 13px;
+    margin: 0 0 0.2rem 0;
+  }
+.messages > time {
+    font-size: 11px;
+    color: #ccc;
+}
+.msg_container {
+    padding: 10px;
+    overflow: hidden;
+    display: flex;
+}
+img {
+    display: block;
+    width: 100%;
+}
+.avatar {
+    position: relative;
+}
+.base_receive > .avatar:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border: 5px solid #FFF;
+    border-left-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+}
+
+.base_sent {
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.base_sent > .avatar:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border: 5px solid white;
+    border-right-color: transparent;
+    border-top-color: transparent;
+    box-shadow: 1px 1px 2px rgba(black, 0.2); // not quite perfect but close
+}
+
+.msg_sent > time{
+    float: right;
+}
+
+
+
+.msg_container_base::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
+}
+
+.msg_container_base::-webkit-scrollbar
+{
+    width: 12px;
+    background-color: #F5F5F5;
+}
+
+.msg_container_base::-webkit-scrollbar-thumb
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #555;
+}
+
+.btn-group.dropup{
+    position:fixed;
+    left:0px;
+    bottom:0;
+}
+
+
+    </style>
+
+    <link rel="stylesheet" href="Style.css"/>
+    <script src="effect.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="row chat-window col-xs-5 col-md-3" id="chat_window_1" style="margin-left:10px;  bottom: 0px">
+        <div class="col-xs-12 col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading top-bar">
+                    <div class="col-md-8 col-xs-8">
+                        <h3 class="panel-title"><span class="glyphicon glyphicon-comment"></span> SkyLine ChatBot</h3>
+                    </div>
+                    <div class="col-md-4 col-xs-4" style="text-align: right;">
+                        <a href="#"><span id="minim_chat_window"
+                                          class="glyphicon glyphicon-minus icon_minim"></span></a>
+                        <a href="#"><span class="glyphicon glyphicon-remove icon_close" data-id="chat_window_1"></span></a>
+                    </div>
+                </div>
+                <div class="panel-body msg_container_base">
+                    <div class="row msg_container base_sent">
+                        <div class="col-md-10 col-xs-10">
+                            <div class="messages msg_sent">
+                                <p>that mongodb thing looks good, huh?
+                                    tiny master db, and huge document store</p>
+                                <time datetime="2009-11-13T20:00">Timothy • 51 min</time>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-xs-2 avatar">
+                            <img src="http://www.bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-1.jpg"
+                                 class=" img-responsive ">
+                        </div>
+                    </div>
+                    <div class="row msg_container base_receive">
+                        <div class="col-md-2 col-xs-2 avatar">
+                            <img src="http://www.bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-1.jpg"
+                                 class=" img-responsive ">
+                        </div>
+                        <div class="col-md-10 col-xs-10">
+                            <div class="messages msg_receive">
+                                <p>that mongodb thing looks good, huh?
+                                    tiny master db, and huge document store</p>
+                                <time datetime="2009-11-13T20:00">Timothy • 51 min</time>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <form action="" method="POST">
+                        <div class="input-group">
+                            <input id="btn-input" type="text" class="form-control input-sm chat_input"
+                                   placeholder="Write your message here..."/>
+                            <span class="input-group-btn">
+                                <button type="submit" class="btn btn-primary btn-sm" id="btn-chat">Send</button>
+                                </span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.1/socket.io.js"></script>
+<script>
+        var socket = io.connect( 'http://' + document.domain + ':' + location.port )
+          // broadcast a message
+        socket.on( 'connect', function() {
+            socket.emit( 'my event', {
+            data: 'User Connected'
+            } )
+            var form = $( 'form' ).on( 'submit', function( e ) {
+            e.preventDefault()
+            // let user_name = $( 'input.username' ).val()
+            let user_input = $( 'input.chat_input' ).val()
+
+            socket.emit( 'my eventes', {
+                //user_name : user_name,
+                message : user_input
+            } )
+            // empty the input field
+            $( 'input.chat_input' ).val( '' ).focus()
+            } )
+        } )
+
+        // capture message
+        socket.on( 'my response', function( msg ) {
+            console.log( msg )
+            //$( 'h1' ).remove()
+            $( 'div.msg_container_base' ).append( '<div class="row msg_container base_sent"><div class="col-md-10 col-xs-10"><div class="messages msg_sent"><p>'+msg.message+'</p></div></div><div class="col-md-2 col-xs-2 avatar"><img src="https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/spaces%2F-Lmia7merEGs8onPxhcd%2Favatar.png?generation=1566297613990669&alt=media" class=" img-responsive "></div></div>' )
+            $( 'div.msg_container_base' ).append( '<div class="row msg_container base_receive"><div class="col-md-2 col-xs-2 avatar"><img src="data:image/png;base64,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" class=" img-responsive "></div><div class="col-md-10 col-xs-10"><div class="messages msg_receive"><p>'+msg.answer+'</p></div></div></div>' )
+        } )
+
+
+
+</script>
+</body>
+</html>

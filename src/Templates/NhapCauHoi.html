@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title> Admin Page</title>
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!--     Fonts and icons     -->
+    <link href="/static/css/css.css" rel="stylesheet"  type="text/css" media="all"/>
+    <link rel="stylesheet" href="/static/css/font-awesome.min.css"  type="text/css" media="all"/>
+    <!-- CSS Files -->
+     <link href="/static/css/light-bootstrap-dashboard.css" rel="stylesheet"  type="text/css" media="all"/>
+    <link  href="/static/css/bootstrap.min.css" rel="stylesheet"  type="text/css" media="all"/>
+
+    <!-- CSS Just for demo purpose, don't include it in your project -->
+    <link href="/static/css/demo.css" rel="stylesheet"  type="text/css" media="all"/>
+    <style>
+
+    #footer
+{
+position: absolute;
+height: 300px
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+    </style>
+</head>
+<body>
+<div class="wrapper">
+        <div class="sidebar" data-image="/src/static/img/sidebar-5.jpg">
+            <div class="sidebar-wrapper">
+                <div class="logo">
+                    <a href="#" class="simple-text">
+                        Quản Lý Web
+                    </a>
+                </div>
+                <ul class="nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/NhapCauHoi">
+                            <i class="nc-icon nc-chart-pie-35"></i>
+                            <p>Nhập Câu Hỏi</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="/NhapCauTraLoi">
+                            <i class="nc-icon nc-circle-09"></i>
+                            <p>Nhập Câu Trả Lời</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="/new-co-hoi-nghe-nghiep">
+                            <i class="nc-icon nc-notes"></i>
+                            <p>Tin Cơ Hội,Nghề Nghiệp</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="/new-ky-nang-kien-thuc">
+                            <i class="nc-icon nc-paper-2"></i>
+                            <p>Tin Kiến Thức, Kỹ Năng</p>
+                        </a>
+                    </li>
+
+                    <li>
+                       <a class="nav-link" href="/logout">
+                            <i class="nc-icon nc-atom"></i>
+                            <p>Đăng xuất</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+<script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+     <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/js/css/font-awesome.min.css">
+    <link href="/static/css/signup.css" rel="stylesheet">
+    <script src="/static/js/jquery-1.11.2.js"></script>
+    <script type="text/javascript" src="/static/js/jquery.tmpl.js"></script>
+    <style>
+body {font-family: Arial;    padding-top: 0px !important;}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+
+    </style>
+    <div class="main-panel">
+       <nav class="navbar navbar-expand-lg " color-on-scroll="500">
+                <div class="container-fluid" style="background-color: #9876db;">
+                    <a class="navbar-brand" href="/NhapCauHoi" style="color: white;"> Nhập câu hỏi </a>
+<!--                    <a class="navbar-brand" href="#pablo" style="margin-left: 800px;    color: white;"> Logout </a>-->
+
+                </div>
+            </nav>
+        <form class="form-horizontal" method="post" style="padding-top: 37px;">
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="fquestion">Câu hỏi:</label>
+            <div class="col-sm-10">
+                <input class="form-control" id="fquestion" placeholder="Nhập câu hỏi" name="feature">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="tquestion">Nhóm câu hỏi:</label>
+            <div class="col-sm-10">
+                <input class="form-control" id="tquestion" placeholder="Nhập nhóm câu hỏi" name="target">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <input type="submit" class="btn btn-default" name="btn" value="Submit"/>
+            </div>
+        </div>
+    </form>
+        <div id="successAlert" class="alert alert-success" role="alert" style="display:none;"></div>
+	    <div id="errorAlert" class="alert alert-danger" role="alert" style="display:none;"></div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <table>
+            <tr>
+                <th>feature</th>
+                <th>target</th>
+            </tr>
+                {% for list in list %}
+                <tr>
+                    <td>{{ list['feature'] }}</td>
+                    <td>{{ list['target'] }}</td>
+                </tr>
+                {% endfor %}
+        </table>
+            </div>
+        </div>
+
+    </div>
+ <footer class="footer">
+                <div class="container-fluid">
+                    <nav>
+                        <ul class="footer-menu">
+                            <li>
+                                <a href="#">
+                                    Home
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Văn phòng khoa
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Thông tin
+                                </a>
+                            </li>
+                        </ul>
+                        <p class="copyright text-center">
+                            <script>
+                                document.write(new Date().getFullYear())
+                            </script>
+                           Team SKYLINE made with love for a better web
+                        </p>
+                    </nav>
+                </div>
+            </footer>
+<!--    end footer-->
+</div>
+<script>
+    $(document).ready(function() {
+
+	$('form').on('submit', function(event) {
+
+		$.ajax({
+			data : {
+				feature : $('#fquestion').val(),
+				target : $('#tquestion').val()
+			},
+			type : 'POST',
+			url : '/NhapCauHoi'
+		})
+		.done(function(data) {
+
+			if (data.error) {
+				$('#errorAlert').text(data.error).show();
+				$('#successAlert').hide();
+			}
+			else {
+				$('#successAlert').text(data.name).show();
+				$('#errorAlert').hide();
+			}
+		});
+
+		event.preventDefault();
+
+
+	});
+
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+{% extends './masterpage.html' %}
+{% block content %}
+<style>
+.accordion {
+  background-color: #eee;
+  font-weight: bold;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 20px;
+  transition: 0.4s;
+}
+
+.accordion:hover {
+  background-color: #ea9d9d;
+}
+
+.panel1 {
+  padding: 0 18px;
+<!--  display: none;-->
+  background-color: white;
+  overflow: hidden;
+}
+.panel2{
+width:100px;
+}
+}
+</style>
+
+   <script>
+	$(function(){
+		$.ajax({
+			url : '/getPostCoHoi',
+			type : 'GET',
+			success: function(res){
+				var div = $('<div>')
+				.append($('<button>')
+                    .attr('class', 'accordion'))
+                .append($('<div>')
+					.attr('class', 'news')
+					.append($('<h5>')
+						.attr('class', 'panel2'),
+						$('<p>')
+							.attr('class', 'panel1')));
+
+                                var wishObj = JSON.parse(res);
+                                var wish = '';
+				$.each(wishObj,function(index, value){
+					wish = $(div).clone();
+					$(wish).find('.accordion').text(value.Title);
+					$(wish).find('h5').text('Ngày đăng: '+value.Date);
+					$(wish).find('p').text(value.Description);
+<!--					$(wish).find('img').attr('src',value.Img);-->
+
+					$('.jumbotron1').append(wish);
+				});
+                var acc = document.getElementsByClassName("accordion");
+                var i;
+
+                for (i = 0; i < acc.length; i++) {
+                  acc[i].addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    var panel = this.nextElementSibling;
+                    if (panel.style.display === "block") {
+                      panel.style.display = "none";
+                    } else {
+                      panel.style.display = "block";
+                    }
+                  });
+}
+			},
+			error: function(error){
+				console.log(error);
+			}
+		});
+	});
+    </script>
+<header class="archive-page-header">
+	<div class="row">
+	<div class="large-12 text-center col">
+	<h1 class="page-title is-large uppercase"><strong>
+		Các bài viết thuộc chuyên mục: <span>Cơ hội nghề nghiệp</span></strong>	</h1>
+		</div>
+	</div>
+</header>
+ <div class="jumbotron1">
+
+
+ </div>
+
+
+{% endblock %}
